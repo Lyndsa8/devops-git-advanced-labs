@@ -35,3 +35,13 @@ The terminal snippet below confirms the generation and cloud-tracking of the par
 * **Git Architecture Design:** Understanding how to safeguard production (`main`) code from raw feature code using an intermediate deployment buffer (`develop`).
 * **Granular Version Tracking:** Mastering micro-commits to capture incremental system changes instead of monolithic, bulk saves.
 * **Linux Workspace Command:** Utilizing standard text output manipulations and system file builders to layout application blueprints entirely from the CLI.
+### 🔄 Integration & Merge Workflow Execution
+Once the parallel feature phases were concluded, I integrated all distinct development streams back into the centralized consolidation hub (`develop`) using an enterprise Git merge workflow:
+1. Merged `feature/login` via a fast-forward progression.
+2. Merged `feature/dashboard` utilizing Git's automatic three-way merge engine, generating a dedicated merge commit.
+3. Merged `feature/reports` to complete the full dashboard subsystem integration.
+
+#### ⚙️ Verification: Unified Git Timeline Graph
+The complete version history topology map below demonstrates the parallel branch divergence and the successful convergence back into the development baseline:
+
+![Unified Integration Graph](images/task1_merge_graph.png)
