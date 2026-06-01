@@ -74,3 +74,37 @@ Below is the terminal capture showing the exact moment the version engine flagge
 * **Conflict Marker Literacy:** Understanding how to accurately interpret `<<<<<<<`, `=======`, and `>>>>>>>` blocks inside code structures.
 * **Team Synergy Practices:** Simulating multi-engineer intersection workflows and standardizing manual mitigation steps.
 * **Local Workspace Stability:** Learning how to safely intercept version failures, patch dependencies from the CLI, and re-stage assets without losing project data.
+
+## 3. Disaster Recovery: Rollback Strategies (Reset vs Revert)
+
+### 📋 Scenario
+An unstable deployment script containing a broken database connection payload string was introduced into the core timeline. To mitigate service downtime, a DevOps specialist must deploy targeted version recovery workflows—evaluating the architectural differences between forward-facing rollbacks (`revert`) and destructive history rewrites (`reset`).
+
+### 🛠️ My Technical Execution
+1. **History Pipeline Construction:** Built a sequential 5-commit infrastructure timeline inside `config/deploy.conf`, culminating in a deliberate production bug tracking payload.
+2. **Forward-Facing Remediation (`git revert`):** Executed `git revert HEAD` to dynamically parse the target anomaly and auto-generate a new inverse patch commit, neutralizing the error while preserving the complete audit trail.
+3. **Staged State Evaluation (`git reset --soft`):** Tested isolated rollback arrays by shifting the branch pointer back one node while keeping the code changes staged, allowing for hot-fix re-authoring.
+4. **Destructive Baseline Purge (`git reset --hard`):** Applied an absolute environment reset to scrub all local file changes and working tree modifications, instantly aligning the environment with the last-known stable deployment state.
+
+### 📌 Requirements Followed
+* **Comprehensive Command Execution:** Successfully simulated and analyzed all three standard undo paradigms.
+* **History Preservation Rules:** Utilized forward-facing overrides for public remote tracking safety, reserving hard resets for private branch cleansing.
+
+### ⚙️ Verification: Forward-Facing Revert Timeline Log
+The log snippet below verifies the creation of a non-destructive recovery path, adding a new correction node while keeping the historical timeline transparent:
+
+![Git Revert Verification Flow](images/task3_revert_log.png)
+
+### 📊 Strategic Command Comparison Table
+The technical variations between each tested disaster recovery mechanism are outlined below:
+
+| Command Parameters | Target Pointer Impact | Working Tree (Local Files) | Remote Safety Profile | Optimal Operational Use-Case |
+| :--- | :--- | :--- | :--- | :--- |
+| `git revert` | Moves forward by adding a new commit | Untouched (receives inverse changes) | 100% Safe for Shared Branches | Undoing bugs pushed to shared production environments |
+| `git reset --soft` | Moves backward to target commit | Untouched (changes remain staged) | Dangerous (Requires Force Push) | Grouping work or rewriting a local commit message |
+| `git reset --hard` | Moves backward to target commit | Instantly wiped to match target commit | High Risk (Destroys uncommitted code) | Complete local abandonment of broken feature experiments |
+
+### 🚀 Skills Gained & Demonstrated
+* **Production Rollback Literacy:** Decoupling safe, public-facing restoration mechanics from volatile local timeline shifts.
+* **Working Tree State Control:** Precision isolation of staged, unstaged, and committed assets during infrastructure emergency events.
+* **History Integrity Auditing:** Managing clean version structures required to meet strict compliance and enterprise rollback metrics.
