@@ -45,3 +45,32 @@ Once the parallel feature phases were concluded, I integrated all distinct devel
 The complete version history topology map below demonstrates the parallel branch divergence and the successful convergence back into the development baseline:
 
 ![Unified Integration Graph](images/task1_merge_graph.png)
+
+## 2. Multi-Student Merge Conflict Challenge
+
+### 📋 Scenario
+In a collaborative DevOps environment, two engineers ('Student A' and 'Student B') simultaneously updated the core application environment configuration file (`config/app.env`) from the same baseline. Student A modified the parameter to `APP_MODE=development` on branch `student-a`, while Student B altered the exact same line to `APP_MODE=production` on branch `student-b`. Integrating both branches into `develop` forced an intentional merge conflict.
+
+### 🛠️ My Technical Execution & Resolution Strategy
+1. **Divergence Setup:** Established two separate branches (`student-a` and `student-b`) originating from the identical `develop` base commit.
+2. **Conflict Trigger:** Merged `student-a` cleanly into `develop`. Attempting to merge `student-b` immediately caused a file-content collision, halting the automatic Git merge engine.
+3. **Manual Resolution:** Opened `config/app.env` via `nano`. Analyzed the conflict architecture:
+   * `<<<<<<< HEAD` captured Student A's development changes.
+   * `=======` isolated the competing edits.
+   * `>>>>>>> student-b` captured Student B's production inputs.
+4. **The Fix:** Deleted all Git conflict markers and aligned the configuration line cleanly to favor the team's production standard: `APP_MODE=production`.
+
+### 📌 Requirements Followed
+* **Authentic Conflict Generation:** Manipulated identical file lines across parallel tracks to block automatic merging.
+* **Targeted File Selection:** Isolated conflict environments inside a dedicated `config/` path structure.
+* **Clean History Commit:** Staged the manual resolution using a detailed, explanatory commit message.
+
+### ⚙️ Verification: Triggered Merge Conflict Warning
+Below is the terminal capture showing the exact moment the version engine flagged the structural merge collision:
+
+![Merge Conflict Verification](images/task2_conflict_triggered.png)
+
+### 🚀 Skills Gained & Demonstrated
+* **Conflict Marker Literacy:** Understanding how to accurately interpret `<<<<<<<`, `=======`, and `>>>>>>>` blocks inside code structures.
+* **Team Synergy Practices:** Simulating multi-engineer intersection workflows and standardizing manual mitigation steps.
+* **Local Workspace Stability:** Learning how to safely intercept version failures, patch dependencies from the CLI, and re-stage assets without losing project data.
