@@ -133,3 +133,27 @@ The image capture below shows the validated GitHub Pull Request interface, featu
 * **Enterprise Branch Security Configuration:** Enforcing compliance baselines over upstream code trunks using cloud protection policies.
 * **Asynchronous Collaboration Mastery:** Navigating distributed peer review models, providing actionable feedback strings, and resolving structural approvals cleanly.
 * **Upstream Synchronization Controls:** Integrating cloud-merged branch assets back into localized terminal states using pull consolidation paths.
+## 6. Emergency Hotfix Production Scenario & Cherry-Picking
+
+### 📋 Scenario
+When an active regression or service outage slips past automated verification matrices into production, immediate remediation is required. However, standard development hubs (`develop`) frequently house ongoing feature work that is unverified for deployment. This lab demonstrates how to execute an isolated emergency hotfix operation, instantly restoring production uptime while surgically synchronizing dependent lifecycle lines (`release/v1.2` and `develop`) using Git's atomic `cherry-pick` mechanics.
+
+### 🛠️ My Technical Execution
+1. **Production Defect Generation:** Introduced a critical token expiration logic error inside `config/auth.conf` on the production tracking baseline (`main`), resulting in widespread authentication timeouts.
+2. **Isolated Containment Architecture:** Transitioned instantly away from development branch tracking, spawning a short-lived emergency container branch named `hotfix/login-failure` anchored directly to the live failure state.
+3. **Hotfix Resolution Delivery:** Repaired the environment metrics locally, committing the patch with enterprise-aligned descriptions, and instantly integrated the code back into `main` to restore live cluster availability.
+4. **Surgical History Transplants (`git cherry-pick`):** Isolated the unique 7-character commit SHA-1 hash generated during the hotfix resolution. Sequentially check-outed into both the staging track (`release/v1.2`) and the development trunk (`develop`), running `git cherry-pick [HASH]` to lift and inject the fix code block cleanly without executing sweeping branch merges.
+
+### 📌 Requirements Followed
+* **Release Flow Integrity:** Separated hotfix delivery pathways from noisy forward-looking development contexts.
+* **Atomic Version Merging:** Leveraged strict commit isolation arguments to prevent regression code cross-contamination.
+
+### ⚙️ Verification: Surgical Cherry-Pick Branch Tracking Log
+The graph log below tracks the system timeline post-operation, validating the clean, isolated replication of the security hotfix commit across our tracking branches:
+
+![Surgical Cherry Pick Verification Log](images/task6_cherry_pick.png)
+
+### 🚀 Skills Gained & Demonstrated
+* **High-Stakes Incident Remediation:** Navigating high-pressure production system breakdowns using rapid branch containment patterns.
+* **Granular Commit Transplantation:** Mastering `git cherry-pick` to maintain total environment alignment while blocking feature-bloat cross-contamination.
+* **Enterprise Release Coordination:** Managing code configurations simultaneously across production, release candidate, and integration tiers.
