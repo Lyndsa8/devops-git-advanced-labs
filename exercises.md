@@ -220,3 +220,27 @@ The status log capture below verifies the successful re-extraction and mapping o
 * **Agile Context Manipulation:** Navigating multi-tiered production infrastructure emergencies without generating junk tracking commits or risking workspace data loss.
 * **State Stack Registry Controls:** Commanding internal background arrays via stashing arguments to stage and isolate multi-file changes.
 * **Workspace Cleansing Protocols:** Rapidly stabilizing local deployment environments to ensure zero cross-contamination between features and hotfixes.
+## 8. Accidental Secret Exposure Recovery & History Rewriting
+
+### 📋 Scenario
+Hardcoding infrastructure access tokens, database credentials, or cryptographic keys directly within codebase assets creates an immediate, severe security posture breakdown. Merely executing a standard deletion patch via a new commit fails to contain the vulnerability, as the raw data remains exposed within the repository's immutable log tracking frames ($SHA-1$ chains). This lab demonstrates how to execute global repository sanitation, completely scrubbing leaked metadata from ancestral tracking paths, reinforcing access policies, and force-aligning centralized mirrors.
+
+### 🛠️ My Technical Execution
+1. **Credential Exposure Mockup:** Created a mock production environment credentials asset containing an active string signature inside `config/secrets.env` and pushed the commit to the cloud mirror.
+2. **Aggressive History Purging (`git filter-branch`):** Initiated a low-level index filter loop utilizing structural scripting strings (`git filter-branch --force --index-filter "git rm --cached --ignore-unmatch config/secrets.env" --prune-empty --tag-name-filter cat -- --all`). This forcefully parsed every single commit block in the repository's history, stripping the secret payload file out from historical caching entirely.
+3. **Environment Security Masking:** Appended `config/secrets.env` into the master `.gitignore` runtime matrix to lock out any future tracking indexing events locally.
+4. **Upstream Alignment Controls:** Issued an explicit upstream push argument utilizing force modifiers (`git push origin develop --force`) to overwrite the exposed cloud tracking graph with the sanitized local historical structure.
+
+### 📌 Requirements Followed
+* **Total History Annihilation:** Sanitized historical log tracking instead of deploying basic deletion commits.
+* **Proactive Exposure Shielding:** Intercepted future accidental staging events via localized file exclusion frameworks.
+
+### ⚙️ Verification: Purged File Historical Tracking Log Search
+The log string verification capture below confirms total asset eradication; querying the system log directly against the specific path returns an absolute null response, proving the file has been expunged from the timeline history:
+
+![Secret Erasure Null Log Verification](images/task8_secret_purge.png)
+
+### 🚀 Skills Gained & Demonstrated
+* **Advanced Cryptographic History Sanitation:** Commanding structural tree filters to manipulate immutable repository baselines.
+* **Incident Response Mitigation:** Managing emergency containment procedures to clean up secret leaks across multi-tier branches.
+* **Centralized Mirror Resynchronization:** Mastering forced-alignment protocols safely over upstream destinations following deep structural changes.
