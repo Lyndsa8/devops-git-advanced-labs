@@ -196,3 +196,27 @@ The graph log below tracks the system timeline post-operation, validating the cl
 * **High-Stakes Incident Remediation:** Navigating high-pressure production system breakdowns using rapid branch containment patterns.
 * **Granular Commit Transplantation:** Mastering `git cherry-pick` to maintain total environment alignment while blocking feature-bloat cross-contamination.
 * **Enterprise Release Coordination:** Managing code configurations simultaneously across production, release candidate, and integration tiers.
+## 7. Stash and Context Switching Exercise
+
+### 📋 Scenario
+In enterprise operational pipelines, engineers frequently experience abrupt priority shifts—such as real-time system alerts requiring immediate branch re-allocations while mid-way through a deep feature development sprint. Committing incomplete, broken code segments corrupts the repository tracking log, while switching branches with a dirty working directory is blocked by Git's safety constraints. This lab leverages Git's internal stack allocation frames (`stash`) to cleanly isolate, preserve, and restore active workspace frames during critical context switches.
+
+### 🛠️ My Technical Execution
+1. **Dirty Working Directory Generation:** Commenced a complex storage architecture update across `storage/db.conf` and `app/api.py` inside the `develop` workspace.
+2. **Untracked Workspace Stashing (`git stash`):** Intercepted the emergency switch order by executing `git stash save -u`, pushing all uncommitted, untracked, and modified assets into Git's internal background stack and rendering the working directory completely pristine.
+3. **Emergency Production Remediation:** Checked out directly into the production line (`main`), authored a core system routing patch inside `config/global.conf`, committed the fix, and pushed the updates to preserve runtime availability.
+4. **Context Recovery Operation (`git stash pop`):** Returned to the development context (`develop`) and executed `git stash pop`. This successfully un-shelved the storage configuration assets from the memory array and mapped them right back into active development states seamlessly.
+
+### 📌 Requirements Followed
+* **Untracked Directory Inclusion:** Applied targeted parameters (`-u`) to guarantee new database folder paths were securely stored along with track-managed changes.
+* **Non-Destructive Context Restorations:** Re-applied the background frames utilizing popping logic to ensure automatic background cleanup of memory registries upon workspace injection.
+
+### ⚙️ Verification: Restored Development State Status Log
+The status log capture below verifies the successful re-extraction and mapping of the shelved assets into the workspace after the emergency context switch:
+
+![Stash Recovery Verification](images/task7_stash_restore.png)
+
+### 🚀 Skills Gained & Demonstrated
+* **Agile Context Manipulation:** Navigating multi-tiered production infrastructure emergencies without generating junk tracking commits or risking workspace data loss.
+* **State Stack Registry Controls:** Commanding internal background arrays via stashing arguments to stage and isolate multi-file changes.
+* **Workspace Cleansing Protocols:** Rapidly stabilizing local deployment environments to ensure zero cross-contamination between features and hotfixes.
