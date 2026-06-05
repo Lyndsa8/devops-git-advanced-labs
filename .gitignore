@@ -1,2 +1,5 @@
 # Infrastructure Secrets
 config/secrets.env
+# Lab 1 Workspace Image Redundancies
+images/task1_conflict_triggered.png
+images/task1_merge_graph.png
